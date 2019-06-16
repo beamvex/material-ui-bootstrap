@@ -8,8 +8,11 @@ import Notifications from "@material-ui/icons/Notifications";
 import Unarchive from "@material-ui/icons/Unarchive";
 import Language from "@material-ui/icons/Language";
 import LocalLibrary from "@material-ui/icons/LocalLibrary";
+import Home from "@material-ui/icons/Home";
 // core components/views for Admin layout
 import DashboardPage from "views/Dashboard/Dashboard.jsx";
+import AboutPage from "views/About/About.jsx";
+import HomePage from "views/Home/Home.jsx";
 import UserProfile from "views/UserProfile/UserProfile.jsx";
 import TableList from "views/TableList/TableList.jsx";
 import Typography from "views/Typography/Typography.jsx";
@@ -21,6 +24,14 @@ import UpgradeToPro from "views/UpgradeToPro/UpgradeToPro.jsx";
 import RTLPage from "views/RTLPage/RTLPage.jsx";
 
 const dashboardRoutes = [
+  {
+    path: "/home",
+    name: "Home",
+    rtlName: "خرائط",
+    icon: Home,
+    component: HomePage,
+    layout: "/admin"
+  },
   {
     path: "/maps",
     name: "Maps",
@@ -34,7 +45,7 @@ const dashboardRoutes = [
     name: "About",
     rtlName: "لوحة القيادة",
     icon: LocalLibrary,
-    component: DashboardPage,
+    component: AboutPage,
     layout: "/admin"
   },
   /*,
