@@ -7,6 +7,7 @@ import LocationOn from "@material-ui/icons/LocationOn";
 import Notifications from "@material-ui/icons/Notifications";
 import Unarchive from "@material-ui/icons/Unarchive";
 import Language from "@material-ui/icons/Language";
+import LocalLibrary from "@material-ui/icons/LocalLibrary";
 // core components/views for Admin layout
 import DashboardPage from "views/Dashboard/Dashboard.jsx";
 import UserProfile from "views/UserProfile/UserProfile.jsx";
@@ -27,8 +28,15 @@ const dashboardRoutes = [
     icon: LocationOn,
     component: Maps,
     layout: "/admin"
-  }
-  
+  },
+  {
+    path: "/about",
+    name: "About",
+    rtlName: "لوحة القيادة",
+    icon: LocalLibrary,
+    component: DashboardPage,
+    layout: "/admin"
+  },
   /*,
   {
     path: "/dashboard",

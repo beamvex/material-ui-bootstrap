@@ -216,6 +216,28 @@ const sidebarStyle = theme => ({
         ",.2)"
     }
   },
+  realblue: {
+    backgroundColor: blueColor,
+    boxShadow:
+      "0 12px 20px -10px rgba(" +
+      hexToRgb(blueColor) +
+      ",.28), 0 4px 20px 0 rgba(" +
+      hexToRgb(blackColor) +
+      ",.12), 0 7px 8px -5px rgba(" +
+      hexToRgb(blueColor) +
+      ",.2)",
+    "&:hover": {
+      backgroundColor: blueColor,
+      boxShadow:
+        "0 12px 20px -10px rgba(" +
+        hexToRgb(blueColor) +
+        ",.28), 0 4px 20px 0 rgba(" +
+        hexToRgb(blackColor) +
+        ",.12), 0 7px 8px -5px rgba(" +
+        hexToRgb(blueColor) +
+        ",.2)"
+    }
+  },
   green: {
     backgroundColor: successColor[0],
     boxShadow:
