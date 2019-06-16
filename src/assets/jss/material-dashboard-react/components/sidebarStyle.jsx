@@ -12,6 +12,7 @@ import {
   whiteColor,
   grayColor,
   blackColor,
+  blueColor,
   hexToRgb
 } from "assets/jss/material-dashboard-react.jsx";
 
@@ -94,15 +95,15 @@ const sidebarStyle = theme => ({
     textAlign: "right"
   },
   logoImage: {
-    width: "30px",
+    width: "180px",
     display: "inline-block",
-    maxHeight: "30px",
+    maxHeight: "180px",
     marginLeft: "10px",
     marginRight: "15px"
   },
   img: {
-    width: "35px",
-    top: "22px",
+    width: "180px",
+    top: "15px",
     position: "absolute",
     verticalAlign: "middle",
     border: "0"
@@ -124,8 +125,8 @@ const sidebarStyle = theme => ({
       height: "100%",
       content: '""',
       display: "block",
-      background: blackColor,
-      opacity: ".8"
+      background: blueColor,
+      opacity: ".75"
     }
   },
   list: {
