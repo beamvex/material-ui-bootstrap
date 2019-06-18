@@ -65,7 +65,10 @@ class Dashboard extends React.Component {
   };
   getRoute() {
     return this.props.location.pathname !== "/admin/maps";
-  }
+  };
+  getHomeRoute() {
+    return this.props.location.pathname !== "/admin/home";
+  };
   resizeFunction = () => {
     if (window.innerWidth >= 960) {
       this.setState({ mobileOpen: false });
@@ -103,20 +106,25 @@ class Dashboard extends React.Component {
           {...rest}
         />
         <div className={classes.mainPanel} ref="mainPanel">
+          {this.getHomeRoute() ? (
           <Navbar
             routes={routes}
             handleDrawerToggle={this.handleDrawerToggle}
             {...rest}
           />
-          {/* On the /maps route we want the map to be on full screen - this is not possible if the content and conatiner classes are present because they have some paddings which would make the map smaller */}
-          {this.getRoute() ? (
+          ) : null }
+          {/* On the /maps route we want the map to be on full screen - 
+          this is not possible if the content and conatiner classes are present because they have some paddings which would 
+          make the map smaller */
+          console.log(this.getRoute())}
+          {this.getRoute() && this.getHomeRoute() ? (
             <div className={classes.content}>
               <div className={classes.container}>{switchRoutes}</div>
             </div>
           ) : (
             <div className={classes.map}>{switchRoutes}</div>
           )}
-          {this.getRoute() ? <Footer /> : null}
+          {this.getRoute() && this.getHomeRoute() ? <Footer /> : null}
           <FixedPlugin
             handleImageClick={this.handleImageClick}
             handleColorClick={this.handleColorClick}
