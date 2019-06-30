@@ -93,6 +93,7 @@ class Dashboard extends React.Component {
   }
   render() {
     const { classes, ...rest } = this.props;
+    const mainPanelClasses = !this.getHomeRoute() ? [classes.mainPanel, classes.blueBack].join(' ') : classes.mainPanel;
     return (
       <div className={classes.wrapper}>
         <Sidebar
@@ -105,7 +106,7 @@ class Dashboard extends React.Component {
           color={this.state.color}
           {...rest}
         />
-        <div className={classes.mainPanel} ref="mainPanel">
+        <div className={mainPanelClasses} ref="mainPanel">
           {this.getHomeRoute() ? (
           <Navbar
             routes={routes}
@@ -117,12 +118,16 @@ class Dashboard extends React.Component {
           this is not possible if the content and conatiner classes are present because they have some paddings which would 
           make the map smaller */
           console.log(this.getRoute())}
-          {this.getRoute() && this.getHomeRoute() ? (
+          {
+            !this.getHomeRoute() ? (
+              <div className={classes.home}>{switchRoutes}</div>
+            ) :
+            this.getRoute() ? (
             <div className={classes.content}>
               <div className={classes.container}>{switchRoutes}</div>
             </div>
           ) : (
-            <div className={classes.map}>{switchRoutes}</div>
+              <div className={classes.map}>{switchRoutes}</div>
           )}
           {this.getRoute() && this.getHomeRoute() ? <Footer /> : null}
           <FixedPlugin

@@ -9,6 +9,7 @@
     "@material-ui/icons":"^4.2.0",
     "@material-ui/styles":"^4.1.1",
     "@material-ui/system":"^4.2.0",
+    "material-ui-image":"^3.2.0",
     "chartist": "0.10.1",
     "classnames": "2.2.6",
     "history": "4.7.2",

@@ -6436,6 +6436,13 @@ markerwithlabel@^2.0.1:
   resolved "https://registry.yarnpkg.com/markerwithlabel/-/markerwithlabel-2.0.2.tgz#fa6aee4abb0ee553e24e2b708226858f58b8729e"
   integrity sha512-C/cbm1A0h/u54gwHk5ZJNdUU3V3+1BbCpRPMsMyFA7vF4yL+aB4rWpxACz29TpQ+cTg6/iQroExh0PMSRGtQFg==
 
+material-ui-image@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/material-ui-image/-/material-ui-image-3.2.0.tgz#557a2838c33a975a223947707736f90439bd47c1"
+  integrity sha512-4eee8BOEXLqAVqj+Vlck7b8+vdlo+8UzuxOGFO3/7w8lnJv7fdy0c6pAXnB5A5rsy3S3JzTKrhzpceN2nPKxLQ==
+  dependencies:
+    prop-types "^15.5.8"
+
 math-random@^1.0.1:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/math-random/-/math-random-1.0.4.tgz#5dd6943c938548267016d4e34f057583080c514c"

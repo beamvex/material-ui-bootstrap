@@ -1,4 +1,8 @@
 import React from "react";
+
+import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
+
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 // core components
@@ -31,6 +35,9 @@ import {
     blueColor,
     hexToRgb
   } from "assets/jss/material-dashboard-react.jsx";
+
+  import Image from 'material-ui-image';
+  import iosapps from '../../assets/img/iscream-ios-apps.png';
 
 const style = {
   typo: {
@@ -72,12 +79,26 @@ const style = {
     opacity: ".75",
     height: '100vh',
     backgroundImage: "url(assets/img/ice-cream-van.jpg)"
+  },
+  titleText: {
+    color: whiteColor,
+    fontWeight: 'bold',
+    fontFamily: "'Helvetica Neue','Helvetica', 'Arial', sans-serif",
   }
 };
 function HomePage(props) {
   const { classes } = props;
   return (
-    <Container className={classes.homePage}>Hello</Container>
+    <Container className={classes.homePage}>
+      <Grid item xs={12}>
+        <h1 className={classes.titleText}>I Scream...</h1>
+        <h1 className={classes.titleText}>U Scream...</h1>
+        <h1 className={classes.titleText}>... We all want an Ice Cream!</h1>
+      </Grid>
+      <Grid item xs={12}>
+        <Image src={iosapps} color={blueColor} animationDuration='5000' aspectRatio='2.42'></Image>
+      </Grid>
+    </Container>
   );
 }
 
