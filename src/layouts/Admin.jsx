@@ -93,7 +93,7 @@ class Dashboard extends React.Component {
   }
   render() {
     const { classes, ...rest } = this.props;
-    const mainPanelClasses = !this.getHomeRoute() ? [classes.mainPanel, classes.blueBack].join(' ') : classes.mainPanel;
+    const mainPanelClasses = !this.getHomeRoute() ? classes.blueBack : classes.mainPanel;
     return (
       <div className={classes.wrapper}>
         <Sidebar

@@ -24,7 +24,14 @@ const appStyle = theme => ({
     overflowScrolling: "touch"
   },
   blueBack: {
-    background: blueColor
+    background: blueColor,
+    overflow: "auto",
+    position: "relative",
+    float: "right",
+    ...transition,
+    maxHeight: "100%",
+    width: "100%",
+    overflowScrolling: "touch"
   },
   content: {
     marginTop: "70px",

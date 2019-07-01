@@ -38,6 +38,8 @@ import {
 
   import Image from 'material-ui-image';
   import iosapps from '../../assets/img/iscream-ios-apps.png';
+import { Button } from "@material-ui/core";
+import { black } from "ansi-colors";
 
 const style = {
   typo: {
@@ -84,19 +86,39 @@ const style = {
     color: whiteColor,
     fontWeight: 'bold',
     fontFamily: "'Helvetica Neue','Helvetica', 'Arial', sans-serif",
+    'text-shadow': '3px 3px #2255c5',
+    opacity: ".75",
+  },
+  bigButton: {
+    background: blackColor,
   }
 };
+
+const ColorButton = withStyles(theme => ({
+  root: {
+    color: whiteColor,
+    backgroundColor: blackColor,
+    '&:hover': {
+      backgroundColor: whiteColor,
+      color: blueColor,
+    },
+  },
+}))(Button);
+
 function HomePage(props) {
   const { classes } = props;
   return (
     <Container className={classes.homePage}>
       <Grid item xs={12}>
-        <h1 className={classes.titleText}>I Scream...</h1>
-        <h1 className={classes.titleText}>U Scream...</h1>
-        <h1 className={classes.titleText}>... We all want an Ice Cream!</h1>
+        <h1 className={classes.titleText}>I Scream...<br/>
+        U Scream...<br/>
+        ... We all want an Ice Cream!</h1>
       </Grid>
       <Grid item xs={12}>
         <Image src={iosapps} color={blueColor} animationDuration='5000' aspectRatio='2.42'></Image>
+      </Grid>      
+      <Grid item xs={12} container justify = "center">
+        <ColorButton>I Want Ice Cream!</ColorButton>
       </Grid>
     </Container>
   );
